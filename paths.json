@@ -1,6 +1,12 @@
 {
     "site_name": "mus",
     "d": {
-        ""
+        "dir": "paths",
+        "dirs": "paths",
+        "dirsdf": "paths"
+    },
+    "f": {
+        "functions.php": "C:\/xampp\/htdocs\/php-gui\/functions.php"
     }
+
 }
