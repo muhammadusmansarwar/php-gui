@@ -110,6 +110,10 @@ body {
 
 /* mus css start */
 
+.top_bar_link {
+    font-size: 16px;
+}
+
 
 /* #site_name_card {
     padding-top: 15px;
