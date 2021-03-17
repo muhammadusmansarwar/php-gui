@@ -24,6 +24,7 @@
 
     <!-- main css -->
     <link href="http://localhost/php-gui/themes/default_theme/css/main.css" rel="stylesheet" />
+    <link href="http://localhost/php-gui/themes/default_theme/css/icons.css" rel="stylesheet" />
     <!-- main js -->
     <link href="http://localhost/php-gui/themes/default_theme/js/main.js" rel="stylesheet" />
 
@@ -32,49 +33,51 @@
 <body style="background-color: #f1f4f6;">
     <div class="main_body" id="main_body">
         <div class="navbar sticky-top flex-md-nowrap p-0 shadow m-0">
-            <div class="d-none d-md-block col-md-3 col-lg-2 bg-light h-100" style="padding-top: 8px;">
+            <div class="d-none d-md-block col-md-3 col-lg-2 bg-light h-100 m-0 p-0">
                 <div class="row">
-                    <div class="h3" id="site_name_card">
-                        MUS GROUP OF IT<i class="fas fa-bars float-end pt-1"></i>
+                    <div class="h5" id="site_name_card">
+                        MUS GROUP OF IT<i class="fas fa-bars float-end pt-1 pe-2"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-9 col-lg-10">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div class="col-12 col-md-9 col-lg-10" style="color: blue;">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 p-0 m-0">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
+                        <div class="col-6">
+                            <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fas fa-gift me-1"></i> Mega Menu<i class="icon icon-chevron-down"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="float-end">
+                                <div class="collapse navbar-collapse" id="navbarCollapse">
+                                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Link</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                        </li>
                                     </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
+                                    <!-- <form class="d-flex">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </form> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>

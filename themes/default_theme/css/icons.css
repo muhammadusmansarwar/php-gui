@@ -1,0 +1,11 @@
+.icon {
+    background-color: rgb(241, 234, 234);
+}
+
+.icon.icon-chevron-down {
+    margin-top: 1;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    background-image: url(http://localhost/php-gui/themes/default_theme/images/icons/chevron-down.svg);
+}
