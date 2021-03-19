@@ -8,75 +8,74 @@
     <meta name="author" content="Muhammad Usman Sarwar" />
     <title>Dashboard</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="http://localhost/php-gui/themes/third_party_libs/bootstrap-5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap core js -->
+    <script src="http://localhost/php-gui/themes/third_party_libs/bootstrap-5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+    <!-- jquery -->
+    <script src="http://localhost/php-gui/themes/third_party_libs/jquery-3.5.1.min.js"></script>
+
 
     <!-- hamburgers core CSS -->
     <link href="http://localhost/php-gui/themes/third_party_libs/hamburgers/hamburgers.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="http://localhost/php-gui/themes/third_party_libs/bootstrap-5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Bootstrap core js -->
-    <link href="http://localhost/php-gui/themes/third_party_libs/bootstrap-5.0.0-beta2/dist/js/bootstrap.min.js" rel="stylesheet" />
+
 
     <!-- font awesome core CSS -->
     <link href="http://localhost/php-gui/themes/third_party_libs/fontawesome/css/all.css" rel="stylesheet" />
     <!-- font awesome core js -->
-    <link href="http://localhost/php-gui/themes/third_party_libs/fontawesome/js/all.js" rel="stylesheet" />
+    <script src="http://localhost/php-gui/themes/third_party_libs/fontawesome/js/all.js"></script>
 
     <!-- main css -->
     <link href="http://localhost/php-gui/themes/default_theme/css/main.css" rel="stylesheet" />
     <link href="http://localhost/php-gui/themes/default_theme/css/icons.css" rel="stylesheet" />
     <!-- main js -->
-    <link href="http://localhost/php-gui/themes/default_theme/js/main.js" rel="stylesheet" />
+    <script src="http://localhost/php-gui/themes/default_theme/js/main.js"></script>
 
 </head>
 
 <body style="background-color: #f1f4f6;">
     <div class="main_body" id="main_body">
-        <div class="navbar sticky-top flex-md-nowrap p-0 shadow m-0">
-            <div class="d-none d-md-block col-md-3 col-lg-2 bg-light h-100 m-0 p-0">
-                <div class="row">
-                    <div class="h5" id="site_name_card">
-                        MUS GROUP OF IT<i class="fas fa-bars float-end pt-1 pe-2"></i>
+        <header id="top_bar" class="navbar sticky-top flex-md-nowrap p-2 bg-light">
+            <div id="top_bar_div" class="row w-100">
+                <div class="col-12 col-md-3 col-lg-2">
+                    <div class="row pt-2">
+                        <div class="h5 col-10" id="site_title">
+                            MUS GROUP OF IT
+                        </div>
+                        <div class="col-2 h4">
+                            <i id="toggle_sidebar" class="fas fa-bars float-end pointer"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-9 col-lg-10" style="color: blue;">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 p-0 m-0">
-                    <div class="container-fluid top_bar_link">
-                        <div class="col-6">
-                            <div class="collapse navbar-collapse" id="navbarCollapse">
-                                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                                    <li class="nav-item">
-                                        <div class="btn-group">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Dropdown
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- <a class="nav-link" href="#"><i class="fas fa-gift me-1"></i> Mega Menu<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                            </svg></a> -->
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="float-end">
+                <div class="col-12 col-md-9 col-lg-10">
+                    <nav class="navbar navbar-expand-lg w-100 p-0 m-0">
+                        <div class="container-fluid top_bar_link">
+                            <div class="col-6">
                                 <div class="collapse navbar-collapse" id="navbarCollapse">
                                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-gift"></i> Mega Menu
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Link</a>
@@ -85,20 +84,32 @@
                                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                                         </li>
                                     </ul>
-                                    <!-- <form class="d-flex">
-                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
-                                    </form> -->
+
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="float-end">
+                                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
+                </div>
             </div>
-        </div> <!-- header close -->
+            <a id="toggle_topbar" class="nav-link pointer" tabindex="-1" aria-disabled="true"><i class="fa fa-angle-double-left"></i></a>
+        </header>
         <div class="container-fluid">
             <div class="row">
-                <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <nav id="main_sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div class="position-sticky pt-3 ps-1">
                         <ul class="nav flex-column">
                             <li class="nav-item">
@@ -141,298 +152,10 @@
                                     <span data-feather="shopping-cart"></span> Products
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="users"></span> Customers
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="bar-chart-2"></span> Reports
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="layers"></span> Integrations
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file"></span> Orders
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="shopping-cart"></span> Products
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="users"></span> Customers
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="bar-chart-2"></span> Reports
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="layers"></span> Integrations
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file"></span> Orders
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="shopping-cart"></span> Products
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="users"></span> Customers
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="bar-chart-2"></span> Reports
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="layers"></span> Integrations
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file"></span> Orders
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="shopping-cart"></span> Products
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="users"></span> Customers
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="bar-chart-2"></span> Reports
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="layers"></span> Integrations
-                                </a>
-                            </li>
+                           
                         </ul>
 
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Current month
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Last quarter
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Social engagement
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Year-end sale
-                                </a>
-                            </li>
-                        </ul>
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Current month
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Last quarter
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Social engagement
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Year-end sale
-                                </a>
-                            </li>
-                        </ul>
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Current month
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Last quarter
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Social engagement
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Year-end sale
-                                </a>
-                            </li>
-                        </ul>
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Current month
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Last quarter
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Social engagement
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Year-end sale
-                                </a>
-                            </li>
-                        </ul>
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Current month
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Last quarter
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Social engagement
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Year-end sale
-                                </a>
-                            </li>
-                        </ul>
-
-
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Current month
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Last quarter
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Social engagement
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Year-end sale
-                                </a>
-                            </li>
-                        </ul>
-
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Current month
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Last quarter
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Social engagement
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span> Year1111-end sale
-                                </a>
-                            </li>
-                        </ul>
-
+                       
 
 
 
@@ -453,7 +176,7 @@
                     </div>
                 </nav>
 
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <main id="page_body" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2">Dashboard</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
@@ -490,7 +213,13 @@
                                 <tr>
                                     <td>1,001</td>
                                     <td>random</td>
-                                    <td>data</td>
+                                    <td>
+                                        <button class="btn btn-primary">data</button>
+                                        <button class="btn btn-info">data</button>
+                                        <button class="btn btn-secondary">data</button>
+                                        <button class="btn btn-danger">data</button>
+
+                                    </td>
                                     <td>placeholder</td>
                                     <td>text</td>
                                 </tr>
