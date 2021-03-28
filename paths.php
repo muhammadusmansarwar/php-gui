@@ -1,6 +1,6 @@
 <?php
-
-
+// require_once __DIR__ . DIRECTORY_SEPARATOR . '../mus_paths.php';
+// require_once $f['SqlFunctions.php'];
 // dbg($fun);
 // $d = array();
 // $f = array();
@@ -85,73 +85,73 @@ $d['Letters'] = __DIR__ . DIRECTORY_SEPARATOR . '../mus_GuestPost/Letters';
 
 
 
-function l(string $path): string
-{
-    $replace = 'localhost/' . $GLOBALS['site_name'];
-    return 'http://' . str_ireplace($GLOBALS['home'], $replace, $path);
-}
-function tpl()
-{
-    $d = $GLOBALS['d'];
-    $f = basename($_SERVER["SCRIPT_FILENAME"], '.php');
-    $tpl = $d['theme'] . '/tpl/' . $f . '.tpl';
-    if (file_exists($tpl)) {
-       return $tpl;
-    } 
-    else {
-        file_put_contents($tpl, '');
-        return $tpl;
-    }
-}
-function ajax()
-{
-    $d = $GLOBALS['d'];
-    $f = basename($_SERVER["SCRIPT_FILENAME"], '.php');
-    $n = str_ireplace('-','_',basename($_SERVER["SCRIPT_FILENAME"], '.php'));
-    $ajax = $d['ajax_files'] . '/' . $n . '.php';
-    if (file_exists($ajax)) {
-       return $ajax;
-    } 
-    else {
-        file_put_contents($ajax, '');
-        return $ajax;
-    }
-}
-function js()
-{
-    $d = $GLOBALS['d'];
-    $js = $d['js'] . '/' . basename($_SERVER["SCRIPT_FILENAME"], '.php') . '.js';
-    if (file_exists($js)) {
-       echo '<script src="'.l($js).'"></script>';
-    } 
-    else {
-        file_put_contents($js, '');
-       echo '<link rel="stylesheet" href="'.l($js).'">';
-    }
-}
-function css()
-{
-    $d = $GLOBALS['d'];
+// function l(string $path): string
+// {
+//     $replace = 'localhost/' . $GLOBALS['site_name'];
+//     return 'http://' . str_ireplace($GLOBALS['home'], $replace, $path);
+// }
+// function tpl()
+// {
+//     $d = $GLOBALS['d'];
+//     $f = basename($_SERVER["SCRIPT_FILENAME"], '.php');
+//     $tpl = $d['theme'] . '/tpl/' . $f . '.tpl';
+//     if (file_exists($tpl)) {
+//        return $tpl;
+//     } 
+//     else {
+//         file_put_contents($tpl, '');
+//         return $tpl;
+//     }
+// }
+// function ajax()
+// {
+//     $d = $GLOBALS['d'];
+//     $f = basename($_SERVER["SCRIPT_FILENAME"], '.php');
+//     $n = str_ireplace('-','_',basename($_SERVER["SCRIPT_FILENAME"], '.php'));
+//     $ajax = $d['ajax_files'] . '/' . $n . '.php';
+//     if (file_exists($ajax)) {
+//        return $ajax;
+//     } 
+//     else {
+//         file_put_contents($ajax, '');
+//         return $ajax;
+//     }
+// }
+// function js()
+// {
+//     $d = $GLOBALS['d'];
+//     $js = $d['js'] . '/' . basename($_SERVER["SCRIPT_FILENAME"], '.php') . '.js';
+//     if (file_exists($js)) {
+//        echo '<script src="'.l($js).'"></script>';
+//     } 
+//     else {
+//         file_put_contents($js, '');
+//        echo '<link rel="stylesheet" href="'.l($js).'">';
+//     }
+// }
+// function css()
+// {
+//     $d = $GLOBALS['d'];
 
-    $site_name = $GLOBALS['site_name'];
+//     $site_name = $GLOBALS['site_name'];
 
-    $css = $d['css'] . '/' . basename($_SERVER["SCRIPT_FILENAME"], '.php') . '.css';
-    // dbg($css);
-    if (file_exists($css)) {
-       echo '<link rel="stylesheet" href="'.l($css).'">';
-    } 
-    else {
-        // $css = explode($site_name, $css);
-        // $css = $site_name . $css[1];
-        // dbg($css);
-    //     $my_file = fopen($css, "w");
-    //     fwrite($my_file, '/MUHAMMAD USMAN SARWAR/');
-    //     fclose($my_file);
-    //    echo '<link rel="stylesheet" href="'.l($css).'">';
-    }
-}
+//     $css = $d['css'] . '/' . basename($_SERVER["SCRIPT_FILENAME"], '.php') . '.css';
+//     // dbg($css);
+//     if (file_exists($css)) {
+//        echo '<link rel="stylesheet" href="'.l($css).'">';
+//     } 
+//     else {
+//         // $css = explode($site_name, $css);
+//         // $css = $site_name . $css[1];
+//         // dbg($css);
+//     //     $my_file = fopen($css, "w");
+//     //     fwrite($my_file, '/MUHAMMAD USMAN SARWAR/');
+//     //     fclose($my_file);
+//     //    echo '<link rel="stylesheet" href="'.l($css).'">';
+//     }
+// }
 
-css();
+// css();
 
 
 
